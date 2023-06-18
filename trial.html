@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="trial.css" />
+    <title>TicTacToe</title>
+  </head>
+  <body>
+    <h1>Tic Tac Toe</h1>
+    <section>
+      <button
+        id="restartButton"
+        class="restart-button"
+        onclick="window.location.reload()"
+      >
+        Restart
+      </button>
+      <div id="board" class="board">
+        <div class="cell" data-cell-index="0"></div>
+        <div class="cell" data-cell-index="1"></div>
+        <div class="cell" data-cell-index="2"></div>
+        <div class="cell" data-cell-index="3"></div>
+        <div class="cell" data-cell-index="4"></div>
+        <div class="cell" data-cell-index="5"></div>
+        <div class="cell" data-cell-index="6"></div>
+        <div class="cell" data-cell-index="7"></div>
+        <div class="cell" data-cell-index="8"></div>
+      </div>
+      <div class="winning-message" id="winningMessage"></div>
+    </section>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="trial.js"></script>
+  </body>
+</html>

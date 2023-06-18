@@ -1,0 +1,89 @@
+h1 {
+  text-align: center;
+}
+
+.board {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  grid-template-columns: repeat(3, auto);
+  background-color: white;
+}
+
+.cell {
+  font-family: "Permanent Marker", cursive;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: 1px solid black;
+  cursor: pointer;
+  font-size: 60px;
+}
+
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3) {
+  border-top: none;
+}
+.cell:first-child,
+.cell:nth-child(4),
+.cell:nth-child(7) {
+  border-left: none;
+}
+.cell:nth-child(3),
+.cell:nth-child(6),
+.cell:nth-child(9) {
+  border-right: none;
+}
+.cell:nth-child(7),
+.cell:nth-child(8),
+.cell:nth-child(9) {
+  border-bottom: none;
+}
+.cell.x,
+.cell.O {
+  cursor: not-allowed;
+}
+
+.board.x .cell:not(.x):not(.O):hover .board.O .cell:not(.x):not(.O):hover {
+  background-color: lightgray;
+}
+
+.cell.x,
+.board.x .cell:not(.x):not(.O):hover {
+  content: "";
+}
+
+.cell.O,
+.board.O .cell:not(.x):not(.O):hover {
+  content: "";
+}
+
+.winning-message {
+  display: none;
+  position: fixed;
+  top: 30%;
+  left: 30%;
+  bottom: 40%;
+  right: 30%;
+  background-color: rgb(0, 255, 255, 0.9);
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 5rem;
+}
+
+.winning-message.show,
+.restart-button.show {
+  display: flex;
+}
+
+.restart-button {
+}
